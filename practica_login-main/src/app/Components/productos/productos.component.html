@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>Productos</h1>
+  <ul class="list-group">
+    <li *ngFor="let producto of productos" class="list-group-item">
+      <h5>{{ producto.name }}</h5>
+      <p>Impuesto: <input type="checkbox" [checked]="producto.impuesto" /></p>
+      <p>Precio: {{ producto.precio | currency }}</p>
+    </li>
+  </ul>
+</div>

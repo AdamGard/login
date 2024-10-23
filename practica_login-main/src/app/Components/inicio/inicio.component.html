@@ -1,0 +1,9 @@
+<div>
+  <!-- Mostrar el botón de cerrar sesión solo si el token está presente -->
+  <div *ngIf="authService.getToken()">
+    <button (click)="logout()" class="btn btn-secondary btn-block">
+      Cerrar sesión
+    </button>
+  </div>
+</div>
+<app-productos></app-productos>
